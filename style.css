@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background-image: url("imagens/fundoflorido.png");
+    color: #000000;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #000000cc;
+}
+
+#layout-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+#button-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+
+button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 15px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+table {
+    margin: 30px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+td {
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    transition: background-image 0.2s;
+}
+
+.wall {
+    background-image: url("imagens/parede.png");
+}
+
+.path {
+    background-image: url("imagens/chao.png");
+}
+
+.bot {
+    background-image: url("imagens/principe.png");
+    animation: pulse 0.4s;
+}
+
+.end {
+    background-image: url("imagens/saida.png") !important;
+}
+
+.visited {
+    background-image: url("imagens/pegadas.png");
+}
+
+.victory-overlay {
+    margin-top: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 640px;
+    height: 576px;
+    background-image: url("imagens/imagemVitoria.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+    display: none;
+}
+
+.pop-in {
+    animation: pop-in 0.5s ease-out forwards;
+}
+
+
+@keyframes pop-in {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+#maze-container {
+    position: relative;
+    display: inline-block;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
