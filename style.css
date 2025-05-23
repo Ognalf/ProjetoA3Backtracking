@@ -26,7 +26,7 @@ h2 {
     flex-wrap: wrap;
 }
 
-#button-panel {
+#painel-de-butao {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -70,11 +70,11 @@ td {
     transition: background-image 0.2s;
 }
 
-.wall {
+.parede {
     background-image: url("imagens/parede.png");
 }
 
-.path {
+.caminho {
     background-image: url("imagens/chao.png");
 }
 
@@ -83,15 +83,15 @@ td {
     animation: pulse 0.4s;
 }
 
-.end {
+.fim {
     background-image: url("imagens/saida.png") !important;
 }
 
-.visited {
+.visitado {
     background-image: url("imagens/pegadas.png");
 }
 
-.victory-overlay {
+.sobrepor-vitoria {
     margin-top: 30px;
     position: absolute;
     top: 0;
@@ -123,7 +123,7 @@ td {
 }
 
 
-#maze-container {
+#labirinto-container {
     position: relative;
     display: inline-block;
 }
